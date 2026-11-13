@@ -1,5 +1,10 @@
 # Cambios
 
+## 1.7.0-poc
+- **Integración Confluence:** `confluence-sync` sube `knowledge/` como espejo de lectura (estándares como páginas editables, JSON como solo lectura) y, bajo demanda, trae de vuelta los estándares editados en Confluence como un Pull Request.
+- El motor sigue leyendo solo `knowledge/`: Confluence nunca decide riesgo ni flujo (AGENTS.md, reglas 1, 5 y 6). Credenciales en GitHub Actions Secrets/Variables, entorno `kanban`.
+- Guía de configuración en `documentacion/17-integracion-confluence.md`.
+
 ## 1.6.0-poc
 - **Integración Jira Cloud:** comenta `/jira crear` en una Issue `[OCD]` para crear una incidencia real con los datos del formulario, los cuatro conjuntos de instrucciones y los estados/pasos actuales del flujo OCD.
 - Las credenciales viven en GitHub Actions Secrets; URL, proyecto y tipo de incidencia se configuran en Actions Variables. La integración valida que la Issue sea OCD, restringe el comando a miembros del repositorio y evita duplicados cuando ya existe el enlace.
